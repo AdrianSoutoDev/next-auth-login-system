@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { useSession, signOut } from "next-auth/react"
-import { useEffect } from 'react'
+import { Nav, Navbar, Container } from 'react-bootstrap';
 
 export default function Header() {
 
@@ -12,44 +12,34 @@ export default function Header() {
 
   return (
     <header>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <div className="container-fluid">
-            <Link href="/"><a className="navbar-brand" >Home</a></Link> 
-              <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
-              </button>
-              <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                    {
+      <Navbar bg="light" expand="lg">
+        <Container>
+          <Navbar.Brand href="/">Home</Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto">
+            {
                       status !== "loading" &&
                       <>
                         {
                           !session ? 
-                            <>
-                              <li className="nav-item">
+                            <>   
                                 <Link href="/login"><a className="nav-link" >Sing In</a></Link>
-                              </li>
-                              <li className="nav-item">
-                                <a className="nav-link" href="#">Register</a>
-                              </li>  
+                              <a className="nav-link" href="#">Register</a>
+                              
                             </>
                           :
                             <>
-                              <li className="nav-item">
                               <Link href=""><a className="nav-link" onClick={ handleSignOut } >Logout</a></Link>
-                              </li>
-                              <li className="nav-item">
-                                <Link href="/user"><a className="nav-link">{session.user.username}</a></Link>
-                              </li> 
+                              <Link href="/user"><a className="nav-link">{session.user.username}</a></Link>
                             </>
                         }
                       </>
-                    }
-                
-                </ul>
-              </div>
-            </div>
-      </nav>
+            }
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
     </header>
   )
 }

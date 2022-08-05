@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import Layout from '../components/Layout'
 import { signIn } from 'next-auth/react';
 
-
 export default function Login() {
 
   const [username, setUserName] = useState()
