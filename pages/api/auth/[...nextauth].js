@@ -4,13 +4,9 @@ import { login } from '../../../src/services/login_service'
 
 const options = {
     //Configure JWT
-    jwt: {
-      secret: process.env.JWTSECRET,
-    },
     session: {
       strategy: "jwt"
     },
-    callbackUrl: 'http://localhost:3000/',
     //Specify Provider
     providers: [
         CredentialsProvider({
@@ -31,8 +27,11 @@ const options = {
                   async jwt({ token, user }){
                     if (user) token.user = user
                     return Promise.resolve(token);
-                  },
+                  }
     },
+    pages: {
+      signIn: '/login'
+    }
   }  
 
 const nextAuthConfig = (req, res) => NextAuth(req, res, options)

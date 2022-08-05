@@ -1,1 +1,3 @@
-- utilizar el middleware de next auth con el matches de paths 
+- login con github
+- register
+- pagina de error de credentials
