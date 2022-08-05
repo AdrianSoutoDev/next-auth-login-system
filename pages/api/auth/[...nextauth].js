@@ -4,6 +4,9 @@ import { login } from '../../../src/services/login_service'
 
 const options = {
     //Configure JWT
+    jwt: {
+      secret: process.env.JWTSECRET,
+    },
     session: {
       strategy: "jwt"
     },

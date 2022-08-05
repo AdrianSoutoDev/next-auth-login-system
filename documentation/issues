@@ -1,1 +1,1 @@
-- insertar el user en el session de next auth
+- utilizar el middleware de next auth con el matches de paths 

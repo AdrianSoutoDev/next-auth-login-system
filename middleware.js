@@ -12,7 +12,7 @@ export async function middleware(req) {
   //USE EXTRACTOR JWT TOKEN
   if (pathsProtectedWithLogin.some(s => req.nextUrl.pathname.startsWith(s))) {
 
-     var accessToken = req.cookies.get('accessToken')    
+    var accessToken = req.cookies.get('accessToken')    
 
     if(!accessToken){
       return redirectLogin(req.nextUrl.clone());

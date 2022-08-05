@@ -9,3 +9,5 @@
 
 4 - He desistido del sistema de login por jwt y cookies propio, la nueva opción es usar next auth que tiene todo implementado y es muy
     extensible con otros logins (facebook, github...)
+
+5 - He conseguido setear el user de la session con el token de jwt en la config de nextAuth

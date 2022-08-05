@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { useSession, signOut, jwt } from "next-auth/react"
+import { useSession, signOut } from "next-auth/react"
 
 export default function Header() {
 
