@@ -3,3 +3,4 @@
 - pagina de error de credentials
 - remember session
 - page 404
+- refactorizr login page, quizas con un custom hook
