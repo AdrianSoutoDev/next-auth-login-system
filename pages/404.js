@@ -1,9 +1,9 @@
 import Layout from '../components/Layout'
 
-export default function User() {
+export default function FourOfour() {
   return (
     <Layout>
-          <h1>Hola User!!!</h1>
+          <h1>Que buscas bro!</h1>
     </Layout>
   )
 }
