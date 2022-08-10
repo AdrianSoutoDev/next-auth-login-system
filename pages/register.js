@@ -41,14 +41,14 @@ export default function Register() {
             }
 
             <label style={{marginTop: "5px"}} htmlFor="username">Username</label>
-            <input className="form-control" type="text" id="username" placeholder="Username" required />
+            <input className="form-control" type="text" name="username" placeholder="Username" required />
             
             <label style={{marginTop: "5px"}} htmlFor="email">Email</label>
-            <input className="form-control" type="text" id="email" placeholder="Email"required />
+            <input className="form-control" type="text" name="email" placeholder="Email"required />
             
             <label style={{marginTop: "5px"}} htmlFor="password">Password</label>
-            <input className="form-control" type="password" placeholder="Password" id="password" onChange={e => setErrorRepeatPassword("")} required />
-            <input className="form-control" type="password" placeholder="Repeat password" id="password2" onChange={e => setErrorRepeatPassword("")} required />
+            <input className="form-control" type="password" placeholder="Password" name="password" onChange={e => setErrorRepeatPassword("")} required />
+            <input className="form-control" type="password" placeholder="Repeat password" name="password2" onChange={e => setErrorRepeatPassword("")} required />
             
             {
             errorRepeatPassword && 
