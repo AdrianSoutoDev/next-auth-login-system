@@ -1,8 +1,8 @@
-const userRepository = require('../../repositories/user_repository')
+import { findUserByUsername, findUserByEmail, findUserById as findUserByIdBd } from '../repositories/user_repository'
 
 const usernameExists = async (username) => {
   try {
-    return await userRepository.findUserByUsername(username) != null
+    return await findUserByUsername(username) != null
   } catch (error) {
     console.log(error)
   }
@@ -10,14 +10,14 @@ const usernameExists = async (username) => {
 
 const emailExists = async (email) => {
   try {
-    return await userRepository.findUserByEmail(email) != null
+    return await findUserByEmail(email) != null
   } catch (error) {
     console.log(error)
   }
 }
 
 const findUserById = async (id) => {
-  return await userRepository.findUserById(id)
+  return await findUserByIdBd(id)
 }
 
 module.exports = {

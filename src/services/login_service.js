@@ -2,7 +2,6 @@ import connectMongo  from '../../mongodb'
 import User from '../models/user'
 import bcrypt from 'bcrypt'
 import * as  loginRepository from '../repositories/login_repository'
-
 const saltRounds = 10
 
 const register = async (user) => {

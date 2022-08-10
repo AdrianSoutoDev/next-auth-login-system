@@ -25,8 +25,7 @@ export default function Header() {
                           !session ? 
                             <>   
                                 <Link href="/login"><a className="nav-link" >Sing In</a></Link>
-                              <a className="nav-link" href="#">Register</a>
-                              
+                                <Link href="/register"><a className="nav-link" >Sing Up</a></Link>    
                             </>
                           :
                             <>
