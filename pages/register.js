@@ -33,7 +33,7 @@ export default function Register() {
     return (
         <Layout>
             <form onSubmit={handleSubmit} style={{textAlign: "center"}}>
-            <h1 className="h3 mb-3 fw-normal">Registrer</h1>
+            <h1 className="h3 mb-3 fw-normal">Register</h1>
 
             {
             error && 
@@ -44,7 +44,7 @@ export default function Register() {
             <input className="form-control" type="text" name="username" placeholder="Username" required />
             
             <label style={{marginTop: "5px"}} htmlFor="email">Email</label>
-            <input className="form-control" type="text" name="email" placeholder="Email"required />
+            <input className="form-control" type="email" name="email" placeholder="Email"required />
             
             <label style={{marginTop: "5px"}} htmlFor="password">Password</label>
             <input className="form-control" type="password" placeholder="Password" name="password" onChange={e => setErrorRepeatPassword("")} required />
